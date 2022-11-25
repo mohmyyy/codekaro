@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <style>
+    #my-form {
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    #my-form input[type=''] {
+      width: 22%;
+      padding: 2px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .container {
+      margin: auto;
+      width: 500px;
+      overflow: auto;
+      padding: 3rem 2rem;
+    }
+    #submit{
+      width: 100%;
+      background-color: orange;
+    }
+    #time{
+      width: 48%;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;"> Book a Call </h1>
+    <p style="text-align: center;">Book a call slot and our representative will call you within 1hr of selected time.</p>
+    <section class="container">
+    <form id="my-form" onsubmit="getFormValue()">
+        <label for="name" style="text-align:left ;">Name: </label><br>
+        <input type="text" id="name" name="name" required size="60"><br><br>
+        <label for="email"> Email: <label><br>
+        <input type="email" id="email" name="email" size="60" required><br><br>
+        <label for="ph">Phone:</label><br>
+        <input type="tel" value="+91" id="ph" name="telephone" maxlength = "13" size="60" required><br><br>
+        <label for="time" > Time for call</label><br>
+        <input type="date" id="time" name="time" required>
+        <input type="time" id="time" required ><br><br>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+  </section>
+    <script> function getFormValue(){
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("name").value;
+      const ph = document.getElementById("ph").value;
+      console.log(name , email,ph)
+    }
+      </script>
+  </body>
+</html>
